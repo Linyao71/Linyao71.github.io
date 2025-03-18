@@ -18,13 +18,17 @@ print("Provinces border Zhejiang province population (millions):", china_provinc
 uk_country = ['England', 'Wales', 'Northern Ireland', 'Scotland'] # set country name
 plt.figure(figsize=(12, 7)) # create a new graphics window, set the width and height
 plt.subplot(1, 2, 1) # create a subplot in the graphics window, select the first subplot
-plt.pie(uk_countries_sorted, labels=uk_country, autopct='%1.1f%%', startangle=270, colors=['mistyrose', 'powderblue', 'teal', 'lightcoral'])
+plt.pie(uk_countries_sorted, labels=uk_country, autopct='%1.1f%%', startangle=90, 
+        colors=['mistyrose', 'powderblue', 'teal', 'lightcoral'],
+        pctdistance=0.8,  # the percentage label is 0.8 away from the center of the circle
+        labeldistance=1.1)  # the distance between the text label and the center of the circle is 1.1
 plt.title('Population percentages in UK Countries') # set title
 
 # the pie chart for provinces border Zhejiang
 china_province = ['Zhejiang', 'Fujian', 'Jiangxi', 'Anhui', 'Jiangsu'] # set provinece name
 plt.subplot(1, 2, 2) # create a subplot in the graphics window, select the second subplot
-plt.pie(china_provinces_sorted, labels=china_province, autopct='%1.1f%%', startangle=270, colors=['lightyellow', 'lightcyan', 'thistle', 'khaki', 'powderblue'])
+plt.pie(china_provinces_sorted, labels=china_province, autopct='%1.1f%%', startangle=90, 
+        colors=['lightyellow', 'lightcyan', 'thistle', 'khaki', 'powderblue'])
 plt.title('Population Distribution in Zhejiang-neighbouring Provinces') # set title
 
 plt.tight_layout() # adjust the layout of subplots to avoid overlapping.
