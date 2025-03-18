@@ -29,7 +29,8 @@ plt.show()
 # print the bar plot
 
 # 3. get the percentage of a specific language
-requested_language = "JavaScript" # the specific language
+requested_language = "JavaScript" 
+# the specific language
 ## if want to get the percentage of other languages, modify this variable.
 percentage = language_percentage.get(requested_language, "Language not found") 
 # get the percentage. 
